@@ -1,8 +1,4 @@
-/*
-* Author: LJH
-* Date: 2019/3/7
-* Description: 自定义插件--vue骨架屏
-*/
+
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const fs = require('fs')
 const pluginName = 'HtmlWebpackPlugin'
