@@ -1,0 +1,28 @@
+{
+  "name": "spa-skeleton-webpack-plugin",
+  "version": "0.0.1",
+  "description": "A webpack plugin for single page web application. Help for build skeleton with different router.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhonMr/spa-skeleton-webpack-plugin.git"
+  },
+  "keywords": [
+    "skeleton",
+    "webpackPlugin",
+    "spa"
+  ],
+  "author": "jhonmrli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JhonMr/spa-skeleton-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/JhonMr/spa-skeleton-webpack-plugin#readme",
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "html-webpack-plugin": "^3.2.0"
+  }
+}
