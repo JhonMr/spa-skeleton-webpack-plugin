@@ -4,12 +4,12 @@
 A webpack plugin for single page web application. Help for build skeleton with different router.
 *
 
-##### Installation
+#### Installation
 
 npm install --save-dev spa-skeleton-webpack-plugin
 
-##### Basic Use
-###### Step1: configration
+#### Basic Use
+##### Step1: configration
 
 ```
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -31,13 +31,19 @@ const webpackConfig = {
         templates: [
             {routes: '/', template: path.resolve(__dirname, `${customPath1}`},
             {routes: ['/search', '/list'], template: path.resolve(__dirname, `${customPath2}`},
+            {
+                routes: [
+                    {pattern: '^/detail\\?id=\\d+', attributes: 'g'}   // RegExp config
+                ],
+                template: path.resolve(__dirname, `${customPath2}`
+            }
         ]
     })
   ]
 }
 ```
 
-###### Step2: Modify template index.html of html-webpack-plugin
+##### Step2: Modify template index.html of html-webpack-plugin
 Add comment <!--skeletonScript--> after wrapEl of you application
 
 ```
@@ -58,7 +64,7 @@ Add comment <!--skeletonScript--> after wrapEl of you application
 </html>
 ```
 
-###### CustomSkeletonFile
+##### CustomSkeletonFile
 
 ```
 <style lang="text/css" scoped>
