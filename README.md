@@ -1,8 +1,6 @@
 ## spa-skeleton-webpack-plugin
 
-*
 A webpack plugin for single page web application. Help for build skeleton with different router.
-*
 
 #### Installation
 
