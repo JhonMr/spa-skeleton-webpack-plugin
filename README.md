@@ -42,7 +42,7 @@ const webpackConfig = {
 ```
 
 ##### Step2: Modify template index.html of html-webpack-plugin
-Add comment <!--skeletonScript--> after wrapEl of you application
+Add comment &lt;!--skeletonScript--$lg; after wrapEl of you application
 
 ```
 <!DOCTYPE html>
