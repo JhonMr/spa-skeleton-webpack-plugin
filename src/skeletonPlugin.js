@@ -29,7 +29,6 @@ class Skeleton {
         if(this.htmlTemplateHandler && this.htmlTemplateHandler instanceof Function)  {
           html = this.htmlTemplateHandler(html) || html;
         }
-        console.log(html)
         if(html.indexOf('<!--skeletonScript-->') > -1) {
           const script = getScript(this.wrapEl, this.mode, this.templates)
           html = html.replace('<!--skeletonScript-->', script)
