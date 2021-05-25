@@ -22,7 +22,10 @@ class Skeleton {
   apply (compiler) {
     compiler.plugin('compilation', compilation=>{
       compilation.plugin('html-webpack-plugin-before-html-processing', (htmlPluginData, cb)=>{
-        let html = htmlPluginData.html
+        let html = htmlPluginData.html;
+        if(this.htmlTemplateHandler && this.htmlTemplateHandler instanceof Function)  {
+          html = this.htmlTemplateHandler(html) || html;
+        }
         if(html.indexOf('<!--skeletonScript-->') > -1) {
           const script = getScript(this.wrapEl, this.mode, this.templates)
           htmlPluginData.html = html.replace('<!--skeletonScript-->', script)
